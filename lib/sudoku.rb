@@ -124,6 +124,9 @@ module Sudoku
     def remove_guess(value)
       raise "#{index} only has one guess #{guesses.inspect} can't remove #{value}" if guesses == [value]
       guesses.delete(value)
+      if guesses.size == 1
+        solve guesses.first
+      end
     end
 
     def unsolved?
