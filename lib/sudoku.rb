@@ -73,8 +73,25 @@ module Sudoku
       '#<%s:0x%s>' % [self.class, object_id.to_s(16)]
     end
 
+    def print(method=:value)
+      border = "+-------+-------+-------+"
+      result = []
+      rows = @sets.select{|set| set.type == 'row' }
+      rows.each_with_index do |row, rid|
+        result << border if rid % 3 == 0
+        r = []
+        row.answers.each_with_index do |answer, cid|
+          r << '|' if cid % 3 == 0
+          r << "#{answer.send(method) || '_'}"
+        end
+        result << "#{r.join(' ')} |"
+      end
+      result << border
+      result.join("\n")
+    end
+
     def to_s
-      @sets.select{|set| set.type == 'row' }.map{|set| set.answers.map(&:to_s).join(' ') }.join("\n")
+      print :value
     end
   end
 

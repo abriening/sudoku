@@ -18,7 +18,6 @@ TODO
 ----
 
 * Add more puzzles for testing
-* Prettier output, [Rubyquiz](http://rubyquiz.com/quiz43.html) format
 * Handle unsolvable puzzles
 * Handle puzzles with multiple solutions (more common with *hard* puzzles)
 * CLI:
