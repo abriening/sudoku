@@ -18,6 +18,9 @@ TODO
 ----
 
 * Add more puzzles for testing
+* Move current solution to "Deductive" strategy
+* Add brute force backtracking strategy
+* Add [Dancing Links](http://en.wikipedia.org/wiki/Dancing_Links) strategy
 * Handle unsolvable puzzles
 * Handle puzzles with multiple solutions (more common with *hard* puzzles)
 * CLI:
