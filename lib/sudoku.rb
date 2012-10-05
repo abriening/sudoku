@@ -36,6 +36,7 @@ module Sudoku
           answer.default =  value
         end
       end
+      self
     end
 
     def set(answers, type)
