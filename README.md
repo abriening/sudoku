@@ -8,7 +8,7 @@ Usage
 
 In irb:
 
-    require 'lib/sudoku.rb'
+    load 'lib/sudoku.rb'
     game = Sudoku::Game.new
     game.load_gamefile 'test/fixtures/game.json'
     game.solve # => true
